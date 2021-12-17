@@ -20,4 +20,5 @@ else
     $query3->bindParam(":longitude", $_POST["longitude"]);
     $query3->execute();
 }
+echo "Location updated";
 ?>
