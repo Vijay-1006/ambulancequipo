@@ -16,15 +16,5 @@ if($query1->rowCount()==0)
     $query2->execute();
     echo "over if";
 }
-else
-{
-    echo "entered else";
-    $query3 = $con->prepare("UPDATE location SET latitude=:latitude, longitude=:longitude WHERE liveStatus='active' AND driverID=:driverID");
-    $query3->bindParam(":driverID", "driverID");
-    $query3->bindParam(":latitude", "latitude");
-    $query3->bindParam(":longitude", "longitude");
-    $query3->execute();
-    echo "over else";
-}
 echo "over";
 ?>
