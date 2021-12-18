@@ -88,7 +88,7 @@ function submitandGoLive()
         $("#formDivision input").attr("readonly", true);
         $("#formDivision select").attr("readonly", true);
         $("#formDivision textarea").attr("readonly", true);
-        getSharingLiveLocation = setInterval(function(){updatePosition(getLocation()); $.post("utilities/startSharing.php", {driverID: sessionStorage.getItem("driverID"), patientID: $("#patientIDstore").html(), latitude: window.lat, longitude: window.lng});}, 120000);
+        getSharingLiveLocation = setInterval(function(){updatePosition(getLocation()); $.post("utilities/startSharing.php", {driverID: sessionStorage.getItem("driverID"), patientID: $("#patientIDstore").html(), latitude: window.lat, longitude: window.lng});}, 10000);
     }
     else if(liveStatus=="sharing")
     {
