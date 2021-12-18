@@ -17,6 +17,7 @@ $query = $con->prepare("SELECT * FROM location WHERE liveStatus='active' AND dri
 $query->execute();
 if($query->rowCount()==0)
 {
+    echo "about to execute";
     $query1 = $con->prepare("INSERT INTO location (driverID, latitude, longitude, patientID, liveStatus, timeBegin) VALUES ('D001', '1.1', '1.2', 1, 'active', CURRENT_TIMESTAMP)");
     $query1->execute();
     echo "executed";
